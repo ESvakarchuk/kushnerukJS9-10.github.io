@@ -1,3 +1,8 @@
+body {
+  /*width: 1024px;
+  height: 768px;*/
+}
+
 /*
 This is the visible area of you carousel.
 Set a width here to define how much items are visible.
@@ -5,6 +10,8 @@ The width can be either fixed in px or flexible in %.
 Position must be relative!
 */
 .jcarousel {
+    margin: 200px auto;
+    width: 960px;
     position: relative;
     overflow: hidden;
 }
@@ -29,6 +36,7 @@ These are the item elements. jCarousel works best, if the items
 have a fixed width and height (but it's not required).
 */
 .jcarousel li {
+    width: 960px;
     /* Required only for block elements like <li>'s */
     float: left;
 }
