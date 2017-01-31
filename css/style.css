@@ -1,7 +1,105 @@
-body {
-  /*width: 1024px;
-  height: 768px;*/
+#wrapper {
+    width: 1024px;
+    margin: 0 auto;
 }
+
+h1 {
+    margin: 50px auto 0 auto;
+    font-size: 24px;
+}
+
+.input-box, .select-box {
+    width: 960px;
+    margin: 100px auto;
+}
+
+/*     Menu     */
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav li ul {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 200px;
+    z-index: 10;
+}
+
+nav li li {
+    position: relative;
+    margin: 0;
+    display: block;
+}
+
+nav li li ul {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    margin: 0;
+}
+
+nav a {
+    line-height: 40px;
+    padding: 0 12px;
+    margin: 0 12px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover, nav a:focus, nav a:active {
+    color: rgb(250, 0, 255);
+}
+
+nav li li a {
+    border-bottom: solid 1px #ebf1f6;
+    margin: 0 10px;
+    padding: 0;
+}
+
+nav li li:last-child a {
+    border-bottom: none;
+}
+
+nav li.main-menu>a {
+    background-image: url('../img/arrow-down.png');
+    background-position: right 20px;
+    background-repeat: no-repeat;
+}
+
+nav li li.main-menu>a {
+    background-image: url('../img/arrow-right.png');
+    background-position: right 16px;
+    background-repeat: no-repeat;
+}
+
+ul.sub-menu {
+    display: none;
+}
+
+.sub-menuсol {
+    background-color: red;
+}
+
+/*     Jcarousel     */
 
 /*
 This is the visible area of you carousel.
@@ -9,34 +107,91 @@ Set a width here to define how much items are visible.
 The width can be either fixed in px or flexible in %.
 Position must be relative!
 */
+
 .jcarousel {
-    margin: 200px auto;
     width: 960px;
+    margin: 100px auto;
     position: relative;
     overflow: hidden;
 }
+
 
 /*
 This is the container of the carousel items.
 You must ensure that the position is relative or absolute and
 that the width is big enough to contain all items.
 */
+
 .jcarousel ul {
     width: 20000em;
     position: relative;
-
     /* Optional, required in this case since it's a <ul> element */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+
 /*
 These are the item elements. jCarousel works best, if the items
 have a fixed width and height (but it's not required).
 */
+
 .jcarousel li {
     width: 960px;
     /* Required only for block elements like <li>'s */
     float: left;
+}
+
+/*     Checkboxes     */
+
+.spantext {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.niceCheck {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url("../img/checkbox.png");
+    overflow: hidden;
+}
+
+.niceChecked {
+    background-position: 0 -17px;
+}
+
+.niceCheck input {
+    margin-left: -100px;
+}
+
+.niceCheckDisabled {
+    background-image: url("../img/checkbox-disabled.png");
+}
+
+input[type=checkbox] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.lab2:after {
+    content: " ";
+    margin-top: 9px;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url("../img/checkbox.png");
+    position: relative;
+    top: 3px;
+}
+
+input[type=checkbox]:checked+label:after {
+    background-position: 0 -17px;
+}
+
+input[type=checkbox]:disabled+label:after {
+    background: url("../img/checkbox-disabled.png");
 }
